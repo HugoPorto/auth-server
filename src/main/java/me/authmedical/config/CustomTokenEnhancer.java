@@ -39,6 +39,10 @@ public class CustomTokenEnhancer implements TokenEnhancer {
 				additionalInfo.put("tenant", userAuth.getTenant());
 			}
 			
+			if(userAuth.getExtra() != null && !userAuth.getExtra().isEmpty()) {
+				additionalInfo.put("extra", userAuth.getExtra());
+			}
+
 			((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);
 		}
 		return accessToken;

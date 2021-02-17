@@ -3,7 +3,6 @@ server:
   servlet:
     contextPath: /auth-server
 
-
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -12,7 +11,7 @@ spring:
     password: 12345
     
   jpa:
-    hibernate.ddl-auto: update
+    #hibernate.ddl-auto: update
     show-sql: true
     properties:
       hibernate:

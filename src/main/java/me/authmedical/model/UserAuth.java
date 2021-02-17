@@ -40,8 +40,8 @@ public class UserAuth extends BaseEntity{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date = new Date();
 	
-	@Type(type = "jsonb")
-	@Column(columnDefinition = "jsonb")
+	@Type(type = "json")
+	@Column(columnDefinition = "json")
 	private Map<String, Object> extra = new HashMap<String, Object>();
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -57,12 +57,15 @@ public class UserAuth extends BaseEntity{
 
 	public List<String> getRolesArray() {
 		List<String> result = new ArrayList<>();
+		
 		if(roles != null) {
 			String [] r = roles.split(",");
+			
 			for (int i = 0; i < r.length; i++) {
 				result.add(r[i].trim().toUpperCase());
 			}
 		}
+		
 		return result;
 	}
 	

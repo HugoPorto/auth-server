@@ -25,6 +25,7 @@ public class User {
 
 	public User(UserAuth userAuth) {
 		this.login = userAuth.getLogin();
+		this.extra = userAuth.getExtra();
 		this.roles = userAuth.getRolesArray();
 		this.tenant = userAuth.getTenant();
 		this.roles.remove("ROLE_ADMIN");

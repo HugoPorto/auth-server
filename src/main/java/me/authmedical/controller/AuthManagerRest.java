@@ -69,6 +69,7 @@ public class AuthManagerRest {
 			userAuth.setPasswordRaw(user.getPassword());
 			userAuth.setLogin(user.getLogin().toLowerCase());
 			userAuth.setEmail(user.getLogin().toLowerCase());
+			userAuth.getExtra().putAll(user.getExtra());
 			StringBuffer roles = new StringBuffer();
 			boolean first = true;
 			for(String s : user.getRoles()) {
