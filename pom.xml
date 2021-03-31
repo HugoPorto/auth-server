@@ -9,8 +9,8 @@
 		<version>2.4.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>me.authmp</groupId>
-	<artifactId>auth-server-mp</artifactId>
+	<groupId>me.authfocux</groupId>
+	<artifactId>auth-server-focux</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>auth-server</name>
 	<description>Auth Server Medical</description>
